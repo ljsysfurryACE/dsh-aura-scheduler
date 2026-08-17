@@ -1,0 +1,19 @@
+- insert:
+    - id: aura-scheduler
+      name: '@agentframe/dsh-aura-scheduler'
+      config:
+        minInterval: 1800
+        maxInterval: 7200
+        quietHours: [23, 8]
+        alpha: 0.4
+        beta: 0.4
+        relevance: 0.5
+        delta: 0.2
+        cooldown: 600
+        offPeakHours: [2, 7]
+        offPeakOnly: false
+        sensors:
+          - kind: file
+            target: /tmp/aura-signal
+            intervalSeconds: 30
+        auto: true

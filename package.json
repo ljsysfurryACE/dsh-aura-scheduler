@@ -1,0 +1,44 @@
+{
+  "name": "@agentframe/dsh-aura-scheduler",
+  "version": "0.2.0",
+  "description": "Proactive scheduling v2: value network + file/process/http sensors + HMAC webhook triggers + off-peak window",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "license": "GPL-3.0",
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "aura",
+    "proactive",
+    "scheduler",
+    "agent"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": ">=4.0.0"
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.json",
+    "test": "tsx tests/smoke.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "tsx": "^4.0.0"
+  },
+  "files": [
+    "src",
+    "cordis.patch.yml",
+    "README.md",
+    "lib"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "type": "module"
+}
